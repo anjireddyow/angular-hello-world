@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }} !
+  </h1>
+  <hr>
+  <h5> Hello World Example </h5>
+  <app-hello-world></app-hello-world>
+  <hr>
+  <h5> User Items Display Example </h5>
+  <app-user-item></app-user-item>
+  <hr>
+  <h5> User List Display Example </h5>
+  <app-user-list></app-user-list>
+  <hr>
+  <h5> Custom Directive Example </h5>
+  <div style="text-align:center">
+  	<span appChangeText > Welcome to {{title}}.</span>
+  </div>
+  <hr>
+  <h5>Custom Pipe Example </h5>
+  <b>Square root of 25 is: {{25 | sqrt}}</b>
+  <hr>
+  <h5>Services Example</h5>
+  <b>Today Date: {{todayDate}}</b>
+  <hr>
+  <app-templatedrivenform></app-templatedrivenform>
+  <hr>
+  <h5> Model Driven Form</h5>
+  <app-modeldrivenform></app-modeldrivenform>
+</div>
+
+<hr>
+  <h5> Roterlink Example </h5>
+<a routerLink = "new-cmp">New Component</a>
+
+<br>
+<br>
+<router-outlet></router-outlet>
+<hr>
+

@@ -1,0 +1,21 @@
+<h5> Template Driven Form Example <h5>
+<form #userLogin= "ngForm" (ngSubmit) = "onClickUserLoginForm(userLogin.value)">
+	<div id="user-data" ngModelGroup="userData" #userData="ngModelGroup" >
+	<label for ="emailid"> Email ID : </label>
+	<input type="text" name = "emailid" placeholder = "Ex: xxxxxx@xxxx.com" [ngModel]="defaultEmailId" required email #emailidref="ngModel" value="text"/>
+	<!-- defaultEmailId value from ts file will be overridden in the value place-->
+	<p *ngIf="!emailidref.valid && emailidref.touched">Please enter valid email id</p>
+	<br/>
+	<label for="password"> Password : </label>
+	<input type="password" name="password" placeholder = "Password" ngModel required/>
+	<br/>
+	<div class="radio" *ngFor="let gender of genders">
+		<label> 
+			<input type="radio" name="gender" ngModel value = "gender"> {{gender}} 
+		</label>
+	</div>
+	<input type="button" value="update Values" (click) = "suggestUserName()"/>
+	<input type="submit" value="submit" [disabled] ="!userLogin.valid" (click) = "suggestUserName()"/>
+	<p *ngIf="!userData.valid && userData.touched"> Form is not valid </p>
+</div>
+</form>

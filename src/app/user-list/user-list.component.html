@@ -1,0 +1,11 @@
+<p>
+  user-list works!
+</p>
+
+<ul>
+	<!-- *ngFor syntax says we want to use the NgFor directive on this attribute. NgFor repeats the element that the ngFor is called. That is, we put it on the li tag and not the ul tag because we want to repeat the list element (li) and not the list itself (ul).
+
+Note that the capitalization here isn’t a typo: NgFor is the capitalization of the class that implements the logic and ngFor is the “selector” for the attribute we want to use.--> 
+	<li *ngFor="let individualUserName of names"> 
+	<app-user-item [name]="individualUserName"></app-user-item> </li>
+</ul>
