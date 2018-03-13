@@ -33,7 +33,7 @@ At a high level, it looks like this:
 	
 // Steps for understanding application
 
-1. Go through Anji_README.txt file 
+1. Go through README_Angular file 
 2. Go through angular-hello-world app
 
 ------------------- angular-hello-world app ---------------------
